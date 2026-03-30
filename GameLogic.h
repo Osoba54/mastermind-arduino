@@ -20,8 +20,8 @@ private:
   GameState currentState = PLAYING;
   unsigned long stateStartTime = 0;
   LiquidCrystal_I2C* lcd;
-  const uint8_t POSSIBLE_CHARS_SIZE = 5;
-  const char POSSIBLE_CHARS[POSSIBLE_CHARS_SIZE] = { '@', '#', '$', '%', '&' };
+  static constexpr uint8_t POSSIBLE_CHARS_SIZE = 5;
+  static constexpr char POSSIBLE_CHARS[POSSIBLE_CHARS_SIZE] = { '@', '#', '$', '%', '&' };
 
   uint8_t cursorX = 0;
   uint8_t cursorY = 3;

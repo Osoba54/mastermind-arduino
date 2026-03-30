@@ -8,9 +8,12 @@
 
 #include "GameLogic.h"
 
+constexpr char Game::POSSIBLE_CHARS[Game::POSSIBLE_CHARS_SIZE];
+
 void Game::init() {
   uint8_t char_wrong[8] = { 0x0, 0x0, 0xE, 0x11, 0x11, 0x11, 0xE, 0x0 };
   uint8_t char_right[8] = { 0x0, 0x0, 0xE, 0x1F, 0x1F, 0x1F, 0xE, 0x0 };
+
 
   lcd->createChar(0, char_wrong);
   lcd->createChar(1, char_right);
